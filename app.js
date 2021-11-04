@@ -95,7 +95,7 @@ app.post("/login", function(req, res) {
 
     req.login(user, function(err) {
         if (err) {
-            console.log("dd");
+            console.log(err);
         } else {
             passport.authenticate("local")(req, res, function() {
                 console.log("k");
